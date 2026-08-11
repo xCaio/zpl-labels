@@ -54,7 +54,7 @@ etiquetas = [
     "code": "5645",
   },
   {
-    "code": "BEMATECH (TERMICA)",
+    "code": "BEMATECH%(TERMICA)",
   },
   {
     "code": "3296",
