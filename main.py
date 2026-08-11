@@ -13,8 +13,10 @@ opcao = input("Digite 'etiqueta' ou 'ribbon': ").upper()
 
 if opcao == "ETIQUETA":
     produtos = etiquetas
+    produto = "ETIQUETA"
 elif opcao == "RIBBON":
     produtos = ribbons
+    produto = "RIBBON"
 else:
     print("Opção inválida. Digite 'etiqueta' ou 'ribbon'.")
     exit()
@@ -23,7 +25,7 @@ print(opcao)
 
 for p in produtos:
     codigo = p.get("code")
-    produto = "ETIQUETA"
+    tipo = produto
     estoque = "VERIFICAR SITE"
 
     url = f"https://stock-frontend-dun-eight.vercel.app/produtos/{codigo}"
@@ -60,7 +62,7 @@ for p in produtos:
 
     ^CF0,30
     ^FO50,205
-    ^FD{produto}^FS
+    ^FD{tipo}^FS
 
     ^FO50,255
     ^GB700,2,2^FS
